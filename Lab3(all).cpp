@@ -11,7 +11,7 @@ public:
 		day = 1;
 		year = 1;
 	}
-	Date(m, d, y){
+	Date(int m, int d, int y){
 		month = m;
 		day = d;
 		year = y;
