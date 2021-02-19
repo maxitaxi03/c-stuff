@@ -11,6 +11,11 @@ public:
 		day = 1;
 		year = 1;
 	}
+	Date(m, d, y){
+		month = m;
+		day = d;
+		year = y;
+	}
 	int getMonth() {
 		return month;
 	}
@@ -44,8 +49,10 @@ public:
 };
 int main(){
 	Date date1;
+	Date date2;
 	cout << date1.getMonth() << "-" << date1.getDay() << "-" << date1.getYear() << endl;
 	int month, day, year;
+	int month2, day2, year2;
 
 	cout << "Please enter a date (Month Day Year): ";
 	cin >> month >> day >> year;
@@ -55,5 +62,14 @@ int main(){
 	date1.setYear(year);
 
 	date1.printDate();
+	
+	cout << "Please enter another date (Month Day Year: ";
+	cin >> month2 >> day2 >> year2;
+
+	date2.setMonth(month2);
+	date2.setDay(day2);
+	date2.setYear(year2);
+
+	date2.printDate();
 	return 0;
 }
